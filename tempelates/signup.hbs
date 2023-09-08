@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="register.css" />
+</head>
+
+<body class="flex">
+    <div class="container">
+        <form action="/signup" method="post">
+            <h1>SIGN UP</h1>
+            <div class="input">
+                <input type="text" required name="fname"/>
+                <label>First Name</label>
+            </div>
+            <div class="input">
+                <input type="text" required name="lname"/>
+                <label>Last Name</label>
+            </div>
+
+            <div class="input">
+                <input type="number" required name="phone"/>
+                <label>Phone Number</label>
+            </div>
+
+               <div class="input">
+                <input type="email" required name="email"/>
+                <label>email</label>
+            </div>
+            
+            
+            <div class="radio-cls">
+              
+                <label>Gender</label>
+                <br>
+                <input type="radio" required name="gender"/>Male
+                
+                <input type="radio" required name="gender"/>Female
+                
+                <input type="radio" required name="gender"/>Others
+            
+            </div>
+
+            <div class="input box">
+                <input type="password" required name="password" id="pass"/>
+                <label>Password</label>
+            </div>
+            
+            <div class="input box">
+                <input type="password" required name="cpassword" id="cpass"/>
+                <label>Confirm Password</label>
+            </div>
+            <input class="L_btn" type="submit" value="REGISTER" />
+        </form>
+   
+    </div>
+</body>
+</html>

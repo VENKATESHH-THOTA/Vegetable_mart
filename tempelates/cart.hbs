@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VEGGIES Cart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+        :root{
+    --orange:#ff7800;
+    --black:#010101;
+    --light-color:#a2978d;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+*{
+    
+                font-family: 'poppins',sans-serif;
+                margin: 0; padding: 0;
+                box-sizing: border-box;
+                outline: none;border: none;
+                text-decoration: none;
+                text-transform: capitalize;
+                transition: all .2s linear;
+}
+        body {
+        
+            background-image: url(ban.jpg);
+        }
+        #crt{
+            border:2px solid black;
+            box-shadow: #eee;
+            margin-left: 16%;
+            margin-right: 13%;
+            padding-bottom: 3%;
+            padding-top: 2%;
+            background-color: white;
+            
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        .item-info {
+           flex: 1px;
+           font-weight: 2rem;
+           color: 
+        }
+        .item-name {
+            display:inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'poppins',sans-serif;
+        }
+        .item-price {
+            font-size: 18px;
+            font-family: 'poppins',sans-serif;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        h1 {
+            text-align: center;
+            color: azure;
+            border: 1px solid white;
+            background-image:linear-gradient(70deg, rgb(224, 228, 30), rgb(56, 195, 79));
+             margin-left: 16%;
+            margin-right: 13%;
+
+        } 
+        p{
+              border: 1px solid rgb(5, 5, 5);
+              font-size: large;
+              font-weight: bolder;
+              margin-left: 38%;
+              margin-right: 38%;
+              margin-bottom: 2rem;
+              
+            background-image:linear-gradient(70deg, rgb(224, 228, 30), rgb(56, 195, 79));
+
+        }
+    </style>
+</head>
+<body>
+    <h1>VEGGIES CART</h1>
+    <div id = "crt">
+        <center>
+            <div id="cartItems">
+        </div>
+        <p><b>Total: </b><span id="cartTotal">0 </span> Rs/-</p>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="checkout()">Buy Now</button>
+        </center>
+        
+    </div>
+    
+
+    <script>
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+            let cartHTML = '';
+            let total = 0;
+
+            Object.entries(cart).forEach(([item, { price, quantity }]) => {
+                const itemTotal = price * quantity;
+                total += itemTotal;
+                cartHTML += `
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <div class="item-name">${item}</div>
+                            <div class="item-price">${price} Rs /Kg</div>
+                            <div>Quantity: ${quantity}</div>
+                            <div>Total: ${itemTotal}  Rs/-</div>
+                        </div>
+                    </div>`;
+            });
+
+            cartItemsElement.innerHTML = cartHTML;
+            cartTotalElement.textContent = total;
+        }
+
+        updateCart();
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            updateCart();
+        }
+
+        function checkout() {
+           
+           window.location.href="billing";
+        }
+    </script>
+</body>
+</html>

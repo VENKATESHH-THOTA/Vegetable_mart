@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEGGIES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>VEGGIES</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#footer">blogs</a>
+        </nav>
+        <div class="dropdown">
+            <div class="select">
+               <span class="selected">Location</span>
+               <div class="caret"></div>
+            </div>
+            <ul class="menu">
+               <li>Andhra Pradesh</li>
+               <li>Arunachal Pradesh</li>
+               <li>Assam</li>
+               <li>Bihar</li>
+               <li>Chandigarh</li>
+               <li>Chattisgarh</li>
+               <li>Delhi</li>
+               <li>Goa</li>
+               <li>Gujarat</li>
+               <li>Haryana</li>
+               <li>Himachal Pradesh</li>
+               <li>jammu and Kashmir</li>
+               <li>Jharkhand</li>
+               <li>Karnataka</li>
+               <li>Kerala</li>
+               <li>Madhya Pradesh</li>
+               <li>Maharashtra</li>
+               <li>Manipur</li>
+               <li>Meghalaya</li>
+               <li>Mizoram</li>
+               <li>Nagaland</li>
+               <li>odisha</li>
+               <li>Punjab</li>
+               <li>Rajasthan</li>
+               <li>Sikkim</li>
+               <li>Tamil Nadu</li>
+               <li>Telangana</li>
+               <li>Tripura<li>
+               <li>Uttarpradesh</li>
+               <li>Uttarakhand</li>
+               <li>West Bengal</li>
+           </ul>
+          </div>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-users" id="login-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+       
+    </header>
+    
+    <section class="home" id="home">
+        <div class="content">
+        <h3>fresh and <span>organic</span>products</h3>
+            <a href="#products" class="btn">Shop now</a>      
+        </div>
+    </section>
+
+    <section class="features" id="features"> 
+
+        <h1 class="heading">our <span>features</span> </h1>
+
+        <div class="box-container">
+
+            <div class = "box">
+              <img src="fresh.png" alt="">
+              <h3> and organic</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam deserunt </p>
+              <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class = "box">
+                <img src="delivery.png" alt="">
+                <h3>free delievery</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam deserunt </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class = "box">
+                <img src="easypay.jpeg" alt="">
+                <h3>easy payments</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam deserunt </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+  <section class="products" id="products">
+    <h1 class="heading"> our <span>products</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider box">
+                <img src="products/onion.jpeg" alt="">
+                <h3> Onion</h3>
+                <div class="price">45/-Rs</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+            </div>
+            <button onclick="addToCart('Onion', 45)" class="btn" type="submit">Add to Cart</button>
+        </div>
+        <div class="swiper-slider box">
+            <img src="products/cucumber.jpeg" alt="">
+            <h3> cucumber</h3>
+            <div class="price">80/- Rs</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+        </div>
+        <button onclick="addToCart('cucumber',80)" class="btn" type="submit">Add to Cart</button>
+    </div>
+    <div class="swiper-slider box">
+        <img src="products/cabbage.jpeg" alt="">
+        <h3> cabbage</h3>
+        <div class="price">40/-Rs</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+    </div>
+    <button onclick="addToCart('cabbage',40)" class="btn" type="submit">Add to Cart</button>
+</div>
+<div class="swiper-slider box">
+    <img src="products/greenchilli.jpeg" alt="">
+    <h3> greenchilli</h3>
+    <div class="price">70/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('green chilli',70)" class="btn" type="submit">Add to Cart</button>
+</div>
+<div class="swiper-slider box">
+    <img src="products/cauliflower.jpeg" alt="">
+    <h3> cauliflower</h3>
+    <div class="price">45/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('cauliflower',45)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+</div>
+    </div>
+
+
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider box">
+                <img src="products/Ginger.jpeg" alt="">
+                <h3> ginger</h3>
+                <div class="price">90/-Rs</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <button onclick="addToCart('ginger',90)" class="btn" type="submit">Add to Cart</button>
+           </div>
+
+           <div class="swiper-slider box">
+            <img src="products/brinjal.jpeg" alt="">
+            <h3> brinjal</h3>
+            <div class="price">45/-Rs</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+           </div>
+             <button onclick="addToCart('Brinjal',45)" class="btn" type="submit">Add to Cart</button>
+          </div>
+
+    <div class="swiper-slider box">
+        <img src="products/radish.jpeg" alt="">
+        <h3> Radish</h3>
+        <div class="price">42/-Rs</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <button onclick="addToCart('radish',42)" class="btn" type="submit">Add to Cart</button>
+    </div>
+<div class="swiper-slider box">
+    <img src="products/ladiesfinger.jpeg" alt="">
+    <h3> ladiesfinger</h3>
+    <div class="price">44/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('Ladies finger',44)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+<div class="swiper-slider box">
+    <img src="products/tomoto.jpeg" alt="">
+    <h3> tomato</h3>
+    <div class="price">60/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('tomato',60)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+</div>
+    </div>
+
+
+
+    
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider box">
+                <img src="products/kale.jpg" alt="">
+                <h3> Kale</h3>
+                <div class="price">35/-Rs</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <button onclick="addToCart('kale',35)" class="btn" type="submit">Add to Cart</button>
+           </div>
+
+           <div class="swiper-slider box">
+            <img src="products/celery2.jpg" alt="">
+            <h3> celery</h3>
+            <div class="price">40/-Rs</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+           </div>
+             <button onclick="addToCart('celery',40)" class="btn" type="submit">Add to Cart</button>
+          </div>
+
+    <div class="swiper-slider box">
+        <img src="products/carrot.jpg" alt="">
+        <h3> carrot</h3>
+        <div class="price">80/-Rs</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <button onclick="addToCart('carrot',80)" class="btn" type="submit">Add to Cart</button>
+    </div>
+<div class="swiper-slider box">
+    <img src="products/mustard-green.jpg" alt="">
+    <h3> mustard green</h3>
+    <div class="price">84/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('mustard-green',84)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+<div class="swiper-slider box">
+    <img src="products/spinach.jpg" alt="">
+    <h3> spinach</h3>
+    <div class="price">42/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('spinach',42)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+</div>
+    </div>
+    
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider box">
+                <img src="products/green lemon.jpg" alt="">
+                <h3> lemon</h3>
+                <div class="price">75/-Rs</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <button onclick="addToCart('lemon',75)" class="btn" type="submit">Add to Cart</button>
+           </div>
+
+           <div class="swiper-slider box">
+            <img src="products/greencap.jpeg" alt="">
+            <h3> Green capsicum</h3>
+            <div class="price">77/-Rs</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+           </div>
+             <button onclick="addToCart('Green capsicum',77)" class="btn" type="submit">Add to Cart</button>
+          </div>
+
+    <div class="swiper-slider box">
+        <img src="products/corn.jpeg" alt="">
+        <h3> corn</h3>
+        <div class="price">60/-Rs</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <button onclick="addToCart('corn',140)" class="btn" type="submit">Add to Cart</button>
+    </div>
+<div class="swiper-slider box">
+    <img src="products/red.jpeg" alt="">
+    <h3> Red capsicum</h3>
+    <div class="price">90/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('Red capsicum',90)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+<div class="swiper-slider box">
+    <img src="products/yellow.jpeg" alt="">
+    <h3> Yellow capsicum</h3>
+    <div class="price">85/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('Yellow Capsicum',85)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+</div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slider box">
+                <img src="products/bitter.jpeg" alt="">
+                <h3> Bitter gourd</h3>
+                <div class="price">45/-Rs</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <button onclick="addToCart('Bitter gourd',45)" class="btn" type="submit">Add to Cart</button>
+           </div>
+
+           <div class="swiper-slider box">
+            <img src="products/bottle.jpeg" alt="">
+            <h3> Bottle Gourd</h3>
+            <div class="price">48/-Rs</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+           </div>
+             <button onclick="addToCart('bottle gourd',48)" class="btn" type="submit">Add to Cart</button>
+          </div>
+
+    <div class="swiper-slider box">
+        <img src="products/drum.jpeg" alt="">
+        <h3> drumsticks</h3>
+        <div class="price">68/-Rs</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <button onclick="addToCart('Drumstick',68)" class="btn" type="submit">Add to Cart</button>
+    </div>
+<div class="swiper-slider box">
+    <img src="products/cluster.jpeg" alt="">
+    <h3> cluster beans</h3>
+    <div class="price">57/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('Cluster Beans',57)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+<div class="swiper-slider box">
+    <img src="products/beet.jpeg" alt="">
+    <h3>beetroot</h3>
+    <div class="price">53/-Rs</div>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<button onclick="addToCart('Beetroot',53)" class="btn" type="submit">Add to Cart</button>
+</div>
+
+</div>
+    </div>
+
+</section>
+
+    <section class="footer" id="footer">
+     <div class="box-container">
+          
+        <div class="box">
+            <h3> VEGGIES <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, necessitatibus. Nesciunt distinctio doloremque reprehenderit molestias quos, sequi impedit perspiciatis earum. Dignissimos nulla placeat fugit facere ratione corrupti, cupiditate laborum! Odio?</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+
+           <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i>+123-456-7890</a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i>+123-456-7890</a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i>abc@gmail.com</a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Hyderabad,india-500010</a>
+           </div>
+           
+           <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i>home</a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i>features</a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i>products</a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i>blogs</a>
+           </div>
+    
+           <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="submit" class="btn">
+            <img src="payment2.jpeg" class="payment-img" alt="">
+           </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>let searchForm = document.querySelector('.search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');
+    loginForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
+    navbar.classList.remove('active');
+}
+
+let shoppingCart = document.querySelector('.shopping-cart');
+
+ document.querySelector('#cart-btn').onclick = () =>{
+    window.location.href="login";
+}
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector('.select');
+    const caret = dropdown.querySelector('.caret');
+    const menu = dropdown.querySelector('.menu');
+    const options = dropdown.querySelectorAll('.menu li');
+    const selected = dropdown.querySelector('.selected');
+
+    select.addEventListener('click',() =>{
+      select.classList.toggle('select-clicked');
+      caret.classList.toggle('caret-rotate');
+      menu.classList.toggle('menu-open');
+   });
+   
+   options.forEach(Option => {
+     Option.addEventListener('click', () => {
+       selected.innerText = Option.innerText;
+       select.classList.remove('select-clicked');
+       caret.classList.remove('caret-rotate');
+       menu.classList.remove('menu-open');
+       Option.forEach(option => {
+          option.classList.remove('active');
+       });
+       Option.classList.add('active');
+     });
+   });
+});
+
+let loginForm = document.querySelector('.login-form');
+
+document.querySelector('#login-btn').onclick = () =>{
+   window.location.href="login";
+}
+
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#men-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    
+    searchForm.classList.remove('active');
+    loginForm.classList.remove('active');
+    shoppingCart.classList.remove('active'); 
+}
+
+window.onscroll = () => {
+    searchForm.classList.remove('active');
+    loginForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
+    navbar.classList.remove('active');
+
+}
+
+var swiper = new Swiper(".product-slider", {
+    loop:true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+
+    },
+    centeredSlides: true,
+    breakpoints: {
+        
+      0: {
+        slidesPerView: 1,
+        },
+      768: {
+        slidesPerView: 2,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+    },
+});</script>
+   
+</body>
+</html>
